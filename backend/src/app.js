@@ -12,8 +12,6 @@ import cors from "cors";
 //access and set cookies from user and for user
 import cookieParser from "cookie-parser";
 
-import bodyParser from "body-parser";
-
 // Create an instance of the Express application
 const app = express();
 
@@ -29,8 +27,6 @@ app.use(
 app.use(express.json({ limit: "16kb" }));
 
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
-
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
 
